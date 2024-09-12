@@ -1,0 +1,721 @@
+ /* ? Import Inter font from Google Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+
+/* ? Root variables for colors, fonts, and spacing */
+:root {
+  /*? Colors */
+  --color-white: rgb(255, 255, 255);
+  --color-darkWhite: rgb(250, 250, 250);
+  --color-antiFlashWhite: rgb(241, 241, 241);
+  --color-davysGray: rgb(84, 84, 84);
+  --color-shadowGray: rgb(70, 70, 70);
+  --color-darkCharcoal: rgb(49, 49, 49);
+  --color-spanishGray: rgb(155, 155, 155);
+  --color-lightGray: rgb(209, 209, 209);
+  --color-eerieBlack: rgb(31, 31, 31);
+
+  /*? Font Family */
+  --font-family-inter: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+
+  /*? Font Weight */
+  --font-weight-400: 400;
+  --font-weight-500: 500;
+  --font-weight-600: 600;
+  --font-weight-700: 700;
+  --font-weight-800: 800;
+  --font-weight-900: 900;
+
+  /* ? Font Size */
+  --font-size-20: 20px;
+
+  /* ? Spaces */
+  --space-10: 10px;
+
+  /* ? Set rem */
+  font-size: var(--font-size-20);
+}
+
+/* ? Global styling */
+body {
+  background-color: var(--color-darkWhite);
+  font-family: var(--font-family-inter);
+  font-weight: var(--font-weight-500);
+  color: var(--color-davysGray);
+}
+nav {
+  background-color: var(--color-darkWhite);
+}
+/* Start Navbar Styling ------------------------------------*/
+.btn__black {
+  background-color: var(--color-eerieBlack);
+  color: var(--color-white);
+  border-radius: 3px;
+  transition: all 0.3s ease-in-out;
+}
+.btn__black:hover {
+  background-color: var(--color-white);
+  color: var(--color-eerieBlack);
+  border: 1px solid var(--color-eerieBlack);
+}
+/* End Navbar Styling --------------------------------------*/
+/* Start Header --------------------------------------------*/
+.header__title {
+  font-size: 2.2rem;
+  line-height: 3.5rem;
+  color: var(--color-eerieBlack);
+}
+.header__paragraph {
+  font-size: 0.8rem;
+}
+.item__num,
+.item__paragraph {
+  font-weight: var(--font-weight-400);
+}
+.item__num {
+  font-size: 1.7rem;
+  margin-bottom: 0;
+}
+.item__paragraph {
+  font-size: 0.6rem;
+}
+.header__image {
+  position: relative;
+}
+.image__container {
+  width: 85%;
+  margin: auto;
+  position: relative;
+}
+.image__container::before {
+  content: "";
+  width: 4rem;
+  height: 4rem;
+  position: absolute;
+  border: 2px solid var(--color-eerieBlack);
+  border-radius: 5px;
+  top: -0.8rem;
+  left: -0.8rem;
+  z-index: -1;
+}
+.header__image::after {
+  content: "\f175";
+  font-family: "Font Awesome 5 Free";
+  font-weight: var(--font-weight-700);
+  font-size: 1.8rem;
+  color: var(--color-white);
+  width: 4rem;
+  height: 4rem;
+  background-color: var(--color-eerieBlack);
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+/* End Header ---------------------------------------------*/
+/* Start Services Section ---------------------------------*/
+.services__header__title {
+  font-weight: var(--font-weight-600);
+  font-size: 1.5rem;
+  position: relative;
+  display: flex;
+  align-items: center;
+  color: var(--color-eerieBlack);
+}
+.services__header__title::before {
+  content: "";
+  display: block;
+  width: 30px;
+  height: 3px;
+  background-color: var(--color-eerieBlack);
+  margin-right: 1rem;
+}
+.services__item__icon {
+  width: 25%;
+}
+.services__item__title {
+  color: var(--color-eerieBlack);
+  font-weight: var(--font-weight-600);
+  font-size: 1.2rem;
+}
+.services__item__paragraph {
+  font-size: 0.8rem;
+}
+/* End Services Section -----------------------------------*/
+/* Start Brilliance Section and Steps Section -------------*/
+.brilliance__image,
+.brilliance__content,
+.steps__image,
+.steps__content {
+  min-width: 48%;
+}
+.brilliance__header,
+.brilliance__box,
+.steps__header,
+.step__content__title {
+  color: var(--color-eerieBlack);
+  font-weight: var(--font-weight-600);
+}
+.brilliance__title,
+.steps__title {
+  font-size: 1.5rem;
+  line-height: 1.7rem;
+}
+.brilliance__paragraph {
+  font-size: 0.8rem;
+}
+.box__paragraph {
+  font-size: 0.6rem;
+}
+.step__icon {
+  width: 40px;
+  height: 40px;
+  background-color: var(--color-eerieBlack);
+  border-radius: 50%;
+}
+.step__icon__box {
+  position: relative;
+}
+.steps__box .col:not(:last-child) .step__icon__box::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 55px;
+  bottom: 0;
+  transform: translateX(-50%);
+  width: 1px;
+  background-color: var(--color-spanishGray);
+}
+.step__content__title {
+  font-size: 1.2rem;
+}
+.step__content__paragraph {
+  font-size: 0.7rem;
+}
+/* End Brilliance Section and Steps Section ---------------*/
+/* Start Customers Section --------------------------------*/
+.customers__title {
+  color: var(--color-eerieBlack);
+}
+.customers__say {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  left: 26%;
+}
+.card {
+  background-color: var(--color-eerieBlack);
+  color: var(--color-white);
+}
+.arrows {
+  margin-top: 1.6rem;
+  width: 30%;
+}
+.arrow {
+  background-color: var(--color-antiFlashWhite);
+  padding: 0.2rem 0.5rem;
+}
+.arrow__fs {
+  font-size: 0.7rem;
+  color: var(--color-shadowGray);
+}
+.quote__fs {
+  font-size: 0.9rem;
+}
+.card-text {
+  font-size: 0.5rem;
+}
+.profile {
+  width: 30px;
+  height: 30px;
+}
+.profile__info h6 {
+  font-size: 0.7rem;
+  margin-bottom: 0.3rem;
+}
+.profile__info p {
+  color: var(--color-spanishGray);
+  font-size: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+.card__header, .card__body, .card__footer {
+  padding: 0.6rem 0.5rem;
+}
+/* End Customers Section ----------------------------------*/
+/* Start Newsletter Section -------------------------------*/
+.newsletter__title {
+  color: var(--color-eerieBlack);
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+}
+.newsletter__paragraph {
+  font-size: 0.7rem;
+  margin-bottom: 2rem;
+}
+/* End Newsletter Section ---------------------------------*/
+/* Start Footer Section -----------------------------------*/
+footer {
+  background-color: var(--color-eerieBlack);
+}
+/* Container for input and button */
+.subscribe__container {
+  display: flex;
+  align-items: center;
+  width: 95%;
+  margin: auto;
+  border-radius: 5px;
+  overflow: hidden;
+  background-color: var(--color-white);
+  padding: 0.3rem;
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translate(-50%, 50%);
+}
+.input__container {
+  display: flex;
+  align-items: center;
+  flex: 1;
+}
+.input__container i {
+  font-size: 0.8rem;
+  margin-right: 0.4rem;
+  color: var(--color-spanishGray);
+}
+.input__container input {
+  border: none;
+  outline: none;
+  width: 100%;
+  font-size: 1rem;
+}
+.subscribe__btn {
+  background-color: var(--color-eerieBlack);
+  color: var(--color-white);
+  padding: 0.4rem 0.6rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 0.6rem;
+  transition: all 0.3s;
+}
+.subscribe__btn:hover {
+  background-color: var(--color-white);
+  color: var(--color-eerieBlack);
+  border: 1px solid var(--color-eerieBlack);
+}
+input::placeholder {
+  color: var(--color-spanishGray);
+  font-size: 0.6rem;
+}
+footer .item p {
+  color: var(--color-lightGray);
+  font-size: 1rem;
+  max-width: 300px;
+}
+footer .item h4 {
+  color: var(--color-white);
+  font-size: 1.2rem;
+  font-weight: var(--font-weight-600);
+  margin-bottom: 1.6rem;
+  margin-top: 1rem;
+}
+.icon {
+  background-color: var(--color-darkCharcoal);
+  color: var(--color-white);
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.2rem;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+}
+.icon:hover {
+  background-color: var(--color-white);
+  font-size: 1.5rem;
+  box-shadow: 2px 2px 5px;
+  scale: 1.2;
+}
+.icon:hover:nth-child(1) {
+  color: rgb(8, 102, 255);
+  border: 1px solid rgb(8, 102, 255);
+}
+.icon:hover:nth-child(2) {
+  color: rgb(29, 161, 242);
+  border: 1px solid rgb(29, 161, 242);
+}
+.icon:hover:nth-child(3) {
+  color: rgb(204, 35, 102);
+  border: 1px solid rgb(204, 35, 102);
+}
+.icon:hover:nth-child(4) {
+  color: rgb(32, 102, 176);
+  border: 1px solid rgb(32, 102, 176);
+}
+/* End Footer Section -------------------------------------*/
+
+/*? Responsive Based on Breakpoints Styles --------------- */
+@media (min-width: 375px) {
+  .card-text {
+    font-size: 0.6rem;
+  }
+  .profile {
+    width: 35px;
+    height: 35px;
+  }
+  .card__header, .card__body, .card__footer {
+    padding: 0.7rem 0.5rem;
+  }
+}
+@media (min-width: 425px) {
+  .card-text {
+    font-size: 0.7rem;
+  }
+  .profile__info h6 {
+    font-size: 0.7rem;
+  }
+  .profile__info p {
+    font-size: 0.5rem;
+  }
+  .card__header, .card__body, .card__footer {
+    padding: 0.8rem 0.7rem;
+  }
+}
+@media (min-width: 576px) {
+}
+@media (min-width: 768px) {
+  .header__title {
+    font-size: 3rem;
+  }
+  .services__header__title {
+    font-size: 2rem;
+  }
+  .services__header__title::before {
+    width: 50px;
+  }
+  .services__item__title {
+    font-size: 1.3rem;
+    line-height: 2.5rem;
+  }
+  .brilliance__title,
+  .steps__title,
+  .customers__title {
+    font-size: 3rem;
+    line-height: 4rem;
+  }
+  .brilliance__paragraph,
+  .box__paragraph,
+  .step__content__paragraph {
+    font-size: 1rem;
+  }
+  .step__content__paragraph {
+    width: 95%;
+  }
+  .step__content__title {
+    font-size: 1.5rem;
+  }
+  .step__icon {
+    width: 60px;
+    height: 60px;
+  }
+  .steps__box .col:not(:last-child) .step__icon__box::after {
+    top: 80px;
+  }
+  .arrows {
+    margin-top: 1.8rem;
+    width: 30%;
+  }
+  .arrow {
+    padding: 0.5rem 0.8rem;
+  }
+  .arrow__fs {
+    font-size: 1rem;
+  }
+  .quote__fs {
+    font-size: 2rem;
+  }
+  .card-text {
+    font-size: 1rem;
+  }
+  .profile__info h6 {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+  }
+  .profile__info p {
+    font-size: 0.7rem;
+  }
+  .card__header, .card__body, .card__footer {
+    padding: 1.9rem 1.1rem;
+  }
+  .newsletter__title {
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+  }
+  .newsletter__paragraph {
+    font-size: 1rem;
+    margin-bottom: 2rem;
+  }
+  .input__container i {
+    font-size: 1rem;
+    margin: 0.5rem;
+  }
+  input::placeholder {
+    font-size: 1rem;
+  }
+  .subscribe__btn {
+    padding: 0.6rem 1.5rem;
+    font-size: 1.1rem;
+  }
+}
+
+@media (min-width: 992px) {
+  .link__fs {
+    font-size: 0.9rem;
+  }
+  .header__title {
+    font-size: 4.5rem;
+    line-height: 4rem;
+  }
+  .header__paragraph {
+    width: 90%;
+    font-size: 0.9rem;
+  }
+  .item__num {
+    font-size: 2.4rem;
+  }
+  .item__paragraph {
+    font-size: 0.8rem;
+  }
+  .image__container::before {
+    width: 5rem;
+    height: 5rem;
+    top: -1rem;
+    left: -1rem;
+  }
+  .header__image::after {
+    width: 5rem;
+    height: 5rem;
+  }
+  .services__header__title::before {
+    width: 60px;
+  }
+  .services__item__icon {
+    width: 30%;
+  }
+  .services__item__title {
+    font-size: 1.3rem;
+  }
+  .services__item__paragraph {
+    font-size: 0.9rem;
+  }
+  .brilliance__title,
+  .steps__title {
+    font-size: 2rem;
+    line-height: 2.5rem;
+  }
+  .step__content__paragraph {
+    width: 100%;
+    font-size: 0.8rem;
+  }
+  .step__content__title {
+    font-size: 1.2rem;
+  }
+  .step__icon {
+    width: 50px;
+    height: 50px;
+  }
+  .steps__box .col:not(:last-child) .step__icon__box::after {
+    top: 70px;
+  }
+  .customers__header {
+    max-width: 80%;
+  }
+  .arrow__fs {
+    font-size: 1.5rem;
+  }
+  .quote__fs {
+    font-size: 3rem;
+  }
+  .card-text {
+    font-size: 1.2rem;
+  }
+  .profile {
+    width: 60px;
+    height: 60px;
+  }
+  .profile__info h6 {
+    font-size: 1.1rem;
+    margin-bottom: 0.7rem;
+  }
+  .profile__info p {
+    font-size: 0.9rem;
+  }
+  .card__header, .card__body, .card__footer {
+    padding: 2rem 3.5rem;
+  }
+  .newsletter {
+    width: 65%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .newsletter__title {
+    font-size: 2.2rem;
+    margin-bottom: 2.5rem;
+  }
+  .newsletter__paragraph {
+    font-size: 1rem;
+    margin-bottom: 2rem;
+  }
+  .subscribe__container {
+    width: 65%;
+    padding: 0.5rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  .link__fs {
+    font-size: 1.1rem;
+  }
+  .header__title {
+    font-size: 5rem;
+  }
+  .header__paragraph {
+    width: 85%;
+    font-size: 1rem;
+  }
+  .item__num {
+    font-size: 3.5rem;
+  }
+  .item__paragraph {
+    font-size: 1.1rem;
+  }
+  .image__container::before {
+    width: 7.5rem;
+    height: 7.5rem;
+    top: -1.2rem;
+    left: -1.2rem;
+  }
+  .header__image::after {
+    font-size: 2.5rem;
+    width: 7.5rem;
+    height: 7.5rem;
+  }
+  .services__header__title::before {
+    width: 100px;
+  }
+  .services__item__title {
+    font-size: 1.5rem;
+  }
+  .services__item__paragraph {
+    font-size: 1.1rem;
+  }
+  .brilliance__image,
+  .brilliance__content,
+  .steps__image,
+  .steps__content {
+    min-width: 47%;
+  }
+  .brilliance__title,
+  .steps__title {
+    font-size: 3rem;
+    line-height: 3.8rem;
+  }
+  .brilliance__paragraph,
+  .box__paragraph {
+    font-size: 1.2rem;
+  }
+  .step__content__paragraph {
+    font-size: 1.1rem;
+  }
+  .step__content__title {
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+  .step__icon {
+    width: 70px;
+    height: 70px;
+  }
+  .steps__box .col:not(:last-child) .step__icon__box::after {
+    top: 90px;
+  }
+  .customers__header {
+    max-width: 50%;
+  }
+  .customers__title {
+    font-size: 2.9rem;
+    line-height: 3.5rem;
+  }
+  .customers__say {
+    left: 15%;
+  }
+  #carouselExampleFade .carousel-inner::after {
+    content: none;
+  }
+  #carouselExampleFade .carousel-inner {
+    display: flex;
+    align-items: stretch;
+    justify-content: space-between;
+  }
+  #carouselExampleFade .carousel-item {
+    opacity: 1;
+    display: block;
+    width: 48%;
+    margin-right: 0;
+  }
+  .quote__fs {
+    font-size: 2.5rem;
+  }
+  .card-text {
+    font-size: 1.1rem;
+  }
+  .profile {
+    width: 60px;
+    height: 60px;
+  }
+  .profile__info h6 {
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+  }
+  .profile__info p {
+    font-size: 0.8rem;
+    margin-bottom: 0.5rem;
+  }
+  .card__header, .card__body, .card__footer {
+    padding: 1.2rem 2rem;
+  }
+  .newsletter__title {
+    font-size: 3.2rem;
+    margin-bottom: 3rem;
+  }
+  .newsletter__paragraph {
+    padding: 0 2rem;
+    font-size: 1.3rem;
+    margin-bottom: 3rem;
+  }
+  .subscribe__container {
+    min-width: 35%;
+    max-width: 850px;
+  }
+  .input__container i {
+    font-size: 1.3rem;
+    margin: 1rem;
+  }
+  .subscribe__btn {
+    padding: 1rem 2.5rem;
+    font-size: 1.2rem;
+  }
+}
+
+@media (min-width: 1400px) {
+  .header__title {
+    font-size: 6.3rem;
+    line-height: 7rem;
+  }
+  .header__paragraph {
+    width: 80%;
+    font-size: 1.1rem;
+  }
+}
